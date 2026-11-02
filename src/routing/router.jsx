@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
 const RootLayout = lazy(() => import("../components/RootLayout"));
@@ -11,33 +11,33 @@ const Contact = lazy(() => import("../components/Contact"));
 
 export const router = createBrowserRouter([
     {
-        path: '/',
+        path: "/",
         element: <RootLayout />,
         children: [
             {
                 index: true,
-                element: <RootLayout />,
+                element: <MyDetails />
             },
             {
-                path: '/about',
+                path: "about",
                 element: <About />
             },
             {
-                path: '/projects',
+                path: "projects",
                 element: <Projects />
             },
             {
-                path: '/skills',
+                path: "skills",
                 element: <TechnicalSkills />
             },
             {
-                path: '/education',
+                path: "education",
                 element: <Education />
             },
             {
-                path: '/contact',
+                path: "contact",
                 element: <Contact />
             }
         ]
-    },
+    }
 ]);

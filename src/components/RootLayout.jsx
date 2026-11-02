@@ -1,4 +1,3 @@
-
 import React, { Fragment } from "react";
 import Navbar from "./Navbar";
 import { Outlet } from "react-router-dom";
@@ -9,7 +8,9 @@ const RootLayout = () => {
     <Fragment>
       <div className="min-h-screen bg-[#070B18]">
         <Navbar />
-        <Outlet />
+        <main>
+          <Outlet />
+        </main>
         <Footer />
       </div>
     </Fragment>
