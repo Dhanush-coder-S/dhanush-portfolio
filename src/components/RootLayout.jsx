@@ -1,19 +1,19 @@
-import React, { Fragment } from "react";
+import React from "react";
 import Navbar from "./Navbar";
 import { Outlet } from "react-router-dom";
 import Footer from "./Footer";
+import ScrollToTop from "./ScrollToTop";
 
 const RootLayout = () => {
   return (
-    <Fragment>
-      <div className="min-h-screen bg-[#070B18]">
-        <Navbar />
-        <main>
-          <Outlet />
-        </main>
-        <Footer />
-      </div>
-    </Fragment>
+    <div className="min-h-screen bg-[#070B18]">
+      <ScrollToTop />
+      <Navbar />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+    </div>
   );
 };
 
