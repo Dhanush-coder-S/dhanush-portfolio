@@ -1,14 +1,13 @@
-import React, { Fragment } from 'react'
-import MyDetails from './components/MyDetails'
-import RootLayout from './components/RootLayout'
-import Footer from './components/Footer'
+import { Suspense } from 'react'
+import { RouterProvider } from 'react-router-dom'
+import { router } from './routing/router'
+import Loading from './components/Loading'
 
 const App = () => {
   return (
-    <Fragment>
-      <RootLayout />
-      <Footer />
-    </Fragment>
+    <Suspense fallback={<Loading />}>
+      <RouterProvider router={router} />
+    </Suspense>
   )
 }
 

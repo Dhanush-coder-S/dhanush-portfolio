@@ -1,7 +1,6 @@
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 import { createBrowserRouter } from "react-router-dom";
 
-const Loading = lazy(() => import("../components/Loading"));
 const RootLayout = lazy(() => import("../components/RootLayout"));
 const MyDetails = lazy(() => import("../components/MyDetails"));
 const About = lazy(() => import("../components/About"));
@@ -17,7 +16,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: <MyDetails />
+                element: <RootLayout />,
             },
             {
                 path: '/about',
@@ -39,7 +38,6 @@ export const router = createBrowserRouter([
                 path: '/contact',
                 element: <Contact />
             }
-
         ]
-    }
+    },
 ]);

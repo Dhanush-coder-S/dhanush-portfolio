@@ -26,9 +26,4 @@ export const navItems = [
         link: "/education",
         icon: GraduationCap,
     },
-    {
-        name: "Contact",
-        link: "/contact",
-        icon: Send,
-    },
 ];
