@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Code2, Sparkles, Terminal, Database, Layers, Wrench, ArrowUpRight, CheckCircle2, Zap, X, } from "lucide-react";
-import { skillsData, categories, categoryIcons } from "../data/skills";
-
-
+import { skillsData, categories, categoryIcons } from "../data/Skills";
 
 const TechnicalSkills = () => {
     const [activeCategory, setActiveCategory] = useState("All");
